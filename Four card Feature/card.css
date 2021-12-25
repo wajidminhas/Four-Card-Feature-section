@@ -1,0 +1,110 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #eee;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    width: 90%;
+    margin: 0px auto;
+    border: 1px solid gray;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 200px 300px 300px 300px;
+    grid-gap: 15px;
+    grid-template-areas: 
+    ". b1 ."
+    "b2 b3 b4"
+    ". b5 .";
+
+}
+.boxes{
+    background-color: white;
+    
+    border-radius: 10px;
+    padding: 10px;
+    /* border: 1px solid gray; */
+    
+
+   
+}
+.boxes img{
+    margin-top: 50px;
+    float: right;
+    padding-right: 10px;
+}
+
+
+
+
+/* ---------supervisor ---------*/
+.box_1{
+grid-area: b1;
+grid-column: 2/3;
+height: 150px;
+text-align: center;
+background-color: #eee;
+
+} 
+.box_1 h3{
+    margin: 0px;
+}
+p, h3:first-child{
+    color: rgba(0,0,0,0.5);
+}
+
+/* ---------- box-2 ---------*/
+
+.box_2{
+    grid-area: b2;
+    margin-top: 150px;
+    height: 300px;
+    border: 1px solid gray;
+   border-top: 2px solid rgba(76, 170, 173, 0.788);
+   box-shadow: 15px, 5px, 15px, 5px , rgb(160, 21, 21);
+   box-shadow: 2px 2px 2px 2px  gray;
+}
+
+/* ---------- box-3 ---------*/
+.box_3{
+    grid-area: b3;
+    /* margin-top: 0px; */
+    height: 300px;
+    border: 1px solid gray;
+    border-top: 2px solid red;
+    box-shadow: 2px 2px 2px 2px  gray;
+}
+
+/* ---------- box-4 ---------*/
+.box_4{
+    grid-area: b4;
+    margin-top: 150px;
+    height: 300px;
+    border: 1px solid gray;
+    border-top: 2px solid yellow;
+    box-shadow: 2px 2px 2px 2px  gray;
+}
+
+/* ---------- box-5 ---------*/
+.box_5{
+    grid-area: b5;
+    height: 300px;
+   margin-top: 30px;
+   border: 1px solid gray;
+   border-top: 2px solid rgb(53, 53, 136);
+   box-shadow: 2px 2px 2px 2px  gray;
+}
+
+.boxes:hover{
+    transform: scale(1.03);
+}
+@media(max-width: 375px){
+    .container{
+        display: flex;
+        flex-direction: column;
+        margin-top: 0px;
+    }
+    .box_2, .box_4, .box_5{
+        margin-top: 0px;
+    }
+}
